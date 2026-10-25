@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0d10">
+<meta name="color-scheme" content="dark">
 <title>ReelChat</title>
 <meta name="description" content="Check in, rate and talk movies and TV with your group chat, right inside iMessage.">
 <!-- link previews (the bubble iMessage shows when someone sends this link) -->
@@ -10,7 +12,7 @@
 <meta property="og:site_name" content="ReelChat">
 <meta property="og:title" content="ReelChat">
 <meta property="og:description" content="Check in, rate and talk movies and TV with your group chat, right inside iMessage.">
-<meta property="og:url" content="https://getreelchat.app/checkin">
+<meta property="og:url" content="https://getreelchat.app/">
 <meta property="og:image" content="https://getreelchat.app/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -31,6 +33,8 @@
     --grey: #3a3a40;
   }
   * { box-sizing: border-box; margin: 0; }
+  /* Safari colours its status bar and toolbar from the html background, so it must be dark too */
+  html { background: var(--bg); color-scheme: dark; }
   html, body { height: 100%; }
   body {
     background: radial-gradient(ellipse at 50% 40%, #1b1a20 0%, var(--bg) 70%);
@@ -174,7 +178,6 @@
 <main>
   <h1 class="logo">Reel<span>Chat</span></h1>
   <p class="tag">Check in, rate and talk movies and TV with your group chat, right inside iMessage.</p>
-  <p class="tag">This is a ReelChat card. Open it on your iPhone to see it.</p>
   <!-- Before release: a button that goes nowhere. At launch, swap it for the App Store link:
        <a class="store" href="(App Store link)"> Apple logo + <small>Download on the</small>App Store </a> -->
   <span class="store soon">
