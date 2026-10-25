@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d0d10">
 <meta name="color-scheme" content="dark">
-<title>ReelChat</title>
+<title>ReelChat: Movies with Friends</title>
 <meta name="description" content="Check in, rate and talk movies and TV with your group chat, right inside iMessage.">
 <!-- link previews (the bubble iMessage shows when someone sends this link) -->
 <meta property="og:type" content="website">
@@ -19,7 +19,13 @@
 <meta property="og:image:alt" content="A film strip of chat messages (OMG, LOL) coming off a film reel, above the ReelChat name">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<!-- getreelchat.app (FEAT-007). No scripts: the page never reads the link (card links carry the chat key after #). -->
+<link rel="icon" type="image/png" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://getreelchat.app/">
+<!-- Site name for Google. Data only: browsers never run an ld+json block, so the page still runs no scripts. -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "ReelChat", "alternateName": "ReelChat: Movies with Friends", "url": "https://getreelchat.app/"}
+</script>
+<!-- getreelchat.app (FEAT-007). No scripts that run: the page never reads the link (card links carry the chat key after #). -->
 <style>
   :root {
     --bg: #0d0d10;
@@ -104,6 +110,13 @@
   .store small { display: block; font-size: 11px; font-weight: 500; text-align: left; }
   .store svg { width: 26px; height: 26px; }
   .note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .features {
+    list-style: none; padding: 0; margin: 34px auto 0; max-width: 760px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; text-align: left;
+  }
+  .features strong { display: block; font-size: 15px; color: var(--text); margin-bottom: 4px; }
+  .features span { font-size: 14px; line-height: 1.4; color: var(--muted); }
+  @media (max-width: 600px) { .features { grid-template-columns: 1fr; max-width: 320px; gap: 16px; } }
   footer { text-align: center; font-size: 12px; color: #6b6861; padding: 0 16px 24px; }
   footer a { color: inherit; }
 
@@ -185,6 +198,11 @@
     <span>Coming to a group chat near you</span>
   </span>
   <p class="note">Free · iPhone · works in any iMessage chat</p>
+  <ul class="features">
+    <li><strong>Check in</strong><span>Tap in on a movie or episode so the group knows you've watched.</span></li>
+    <li><strong>Rate it</strong><span>Give it stars and see how the whole group scored it.</span></li>
+    <li><strong>Talk without spoilers</strong><span>Every movie and episode gets its own spoiler-safe chat.</span></li>
+  </ul>
 </main>
 
 <footer>© 2026 ReelChat · <a href="#">Privacy</a> · <a href="#">Support</a></footer>
